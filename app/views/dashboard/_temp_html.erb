@@ -1,0 +1,45 @@
+<h1 class='py-3'>Coffee Shop</h1>
+
+<h4 class='text-center py-5'>Ventas mensuales en los últimos 12 meses</h4>
+
+<%= line_chart @sales_grouped_by_month %>
+
+<h4 class='text-center py-5'>Cantidad de ventas mensuales en los últimos 12 meses</h4>
+
+<%= column_chart @sales_quantity_grouped_by_month %>
+
+<h4 class='text-center py-5'>Promedio de ventas mensuales en los últimos 12 meses</h4>
+
+<%= column_chart @sales_average_grouped_by_month %>
+
+<h4 class='text-center py-5'>Cantidad de ventas según origen en los últimos 12 meses</h4>
+
+<%= pie_chart @sales_group_by_origin_last_year %>
+
+<h4 class='text-center py-5'>Cantidad de ventas según origen en los últimos 6 meses</h4>
+
+<%= pie_chart @sales_group_by_origin_half_year_ago %>
+
+<h4 class='text-center py-5'>Cantidad de ventas según origen en los últimos 3 meses</h4>
+
+<%= pie_chart @sales_group_by_origin_last_trimester %>
+
+<h4 class='text-center py-5'>Cantidad de ventas según origen en el último mes</h4>
+
+<%= pie_chart @sales_group_by_origin_last_month %>
+
+<h4 class='text-center py-5'>Cantidad de ventas según mezcla en los últimos 12 meses</h4>
+
+<%= pie_chart @sales_group_by_blend_last_year %>
+
+<h4 class='text-center py-5'>Cantidad de ventas según mezcla en los últimos 6 meses</h4>
+
+<%= pie_chart @sales_group_by_blend_half_year_ago %>
+
+<h4 class='text-center py-5'>Cantidad de ventas según mezcla en los últimos 3 meses</h4>
+
+<%= pie_chart @sales_group_by_blend_last_trimester %>
+
+<h4 class='text-center py-5'>Cantidad de ventas según mezcla en el último mes</h4>
+
+<%= pie_chart @sales_group_by_blend_last_month %>

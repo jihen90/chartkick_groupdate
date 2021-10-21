@@ -1,0 +1,115 @@
+<h1 class='py-3'>Coffee Shop
+    <span> <%= link_to '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-coffee" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <path d="M3 14c.83 .642 2.077 1.017 3.5 1c1.423 .017 2.67 -.358 3.5 -1c.83 -.642 2.077 -1.017 3.5 -1c1.423 -.017 2.67 .358 3.5 1" />
+    <path d="M8 3a2.4 2.4 0 0 0 -1 2a2.4 2.4 0 0 0 1 2" />
+    <path d="M12 3a2.4 2.4 0 0 0 -1 2a2.4 2.4 0 0 0 1 2" />
+    <path d="M3 10h14v5a6 6 0 0 1 -6 6h-2a6 6 0 0 1 -6 -6v-5z" />
+    <path d="M16.746 16.726a3 3 0 1 0 .252 -5.555" />
+    </svg>'.html_safe, '#' %> </span>
+</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 py-4">
+      <div class="card">
+        <h5 class="card-header">Ventas mensuales en los últimos 12 meses</h5>
+        <div class="card-body">
+          <%= line_chart @sales_grouped_by_month %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 py-4">
+      <div class="card">
+        <h5 class="card-header">Cantidad de ventas mensuales en los últimos 12 meses</h5>
+        <div class="card-body">
+          <%= column_chart @sales_quantity_grouped_by_month %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 py-4">
+      <div class="card">
+        <h5 class="card-header">Promedio de ventas mensuales en los últimos 12 meses</h5>
+        <div class="card-body">
+          <%= column_chart @sales_average_grouped_by_month %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 py-4">
+      <div class="card">
+        <h5 class="card-header">Cantidad de ventas según origen en los últimos 12 meses</h5>
+        <div class="card-body">
+          <%= pie_chart @sales_group_by_origin_last_year %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 py-4">
+      <div class="card">
+        <h5 class="card-header">Cantidad de ventas según origen en los últimos 6 meses</h5>
+        <div class="card-body">
+          <%= pie_chart @sales_group_by_origin_half_year_ago %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 py-4">
+      <div class="card">
+        <h5 class="card-header">Cantidad de ventas según origen en los últimos 3 meses</h5>
+        <div class="card-body">
+          <%= pie_chart @sales_group_by_origin_last_trimester %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 py-4">
+      <div class="card">
+        <h5 class="card-header">Cantidad de ventas según origen en el último mes</h5>
+        <div class="card-body">
+          <%= pie_chart @sales_group_by_origin_last_month %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 py-4">
+      <div class="card">
+        <h5 class="card-header">Cantidad de ventas según mezcla en los últimos 12 meses</h5>
+        <div class="card-body">
+          <%= pie_chart @sales_group_by_blend_last_year %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 py-4">
+      <div class="card">
+        <h5 class="card-header">Cantidad de ventas según mezcla en los últimos 6 meses</h5>
+        <div class="card-body">
+          <%= pie_chart @sales_group_by_blend_half_year_ago %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 py-4">
+      <div class="card">
+        <h5 class="card-header">Cantidad de ventas según mezcla en los últimos 3 meses</h5>
+        <div class="card-body">
+          <%= pie_chart @sales_group_by_blend_last_trimester %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 py-4">
+      <div class="card">
+        <h5 class="card-header">Cantidad de ventas según mezcla en el último mes</h5>
+        <div class="card-body">
+          <%= pie_chart @sales_group_by_blend_last_month %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
